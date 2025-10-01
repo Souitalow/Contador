@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contador</title>
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+        
+        }
+        body {
+            min-height: 100vh; 
+            background-color: rgb(0, 0, 0);
+            color: rgb(255, 255, 255);
+            display: grid;
+            place-items: center;
+        }
+        section {
+            background-color: rgb(37, 37, 37);
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        p {
+            font-size: 100px;
+        }
+
+    </style>
+</head>
+<body>
+
+<section>
+    <h1>Meu Contador</h1>
+    <p>0</p>
+    <button onclick="menos()">menos</button>
+    <button onclick="mais()">mais</button>
+</section>
+<script>
+    let valor = 0;
+    function menos() {
+        valor = valor - 1
+        tela()
+    }
+    function mais()  {
+        valor = valor + 1
+        tela()
+    }
+    function tela() {
+        p = document.querySelector("p")
+        p.innerText = valor
+    }
+</script>
+</body>
+</html>
